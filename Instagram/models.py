@@ -20,7 +20,7 @@ class Following(models.Model):
         return f'{self.username}'
 
 # User Posts
-class Post(models,Model):
+class Posts(models,Model):
     pic = models.ImageField(upload_to = 'posts/')
     caption = models.CharField(blank=True,max_length=245)
     Profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
@@ -40,7 +40,7 @@ class Comments(models.Model):
 
     def __str__ (self):
         return f'{self.username}'
-        
+
                    
 
 
