@@ -1,22 +1,22 @@
 from django.test import TestCase
 from .models import Profile,Posts,Comments,Following
 
-class  FollowingTestcaseClass(TestCase):
+# Testing the 'Following' and 'Comments'
+
+class FollowingTestClass(TestCase):
     def setUp(self):
-        self .mykey=Following(username='marabel',followed='shanice')
-
-
+        self.esther=Following(username='mykey',followed='marabel')
+                            
     def test_instance(self):
-        sel.assertTrue(isinstance)(self.mykey,Following))
-
+        self.assertTrue(isinstance(self.mykey,Following))
 
 class CommentTestClass(TestCase):
     def setUp(self):
-        self.first=Comment(post=1
-                           username='mykey',
-                           comment='What an aweome memory!'
-                           date='Jan 17, 2020 11:07 a.m' ,
-                           count=0)
+        self.first=Comment(post=1,
+                            username='mykey',
+                            comment='What a great throw-back',
+                            date='Jan 07, 2020, 08:50 a.m.',
+                            count=0)
 
-    def tast_instance(self):
-        self.assertTrue(isinstance(self.first,Comment))                                  
+    def test_instance(self):
+        self.assertTrue(isinstance(self.first,Comment))
