@@ -2,7 +2,7 @@ from .models import Profile,Posts
 from django import forms
 
 #Form
-class DetailsForm(forms,ModelForm):
+class DetailsForm(forms.ModelForm):
     class Meta:
         model = Profile
         exclude = ['user']

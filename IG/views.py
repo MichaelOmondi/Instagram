@@ -3,7 +3,7 @@ from django.shortcuts import render,redirect
 from django.http  import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .models import Profile,Post,Following,Comment
+from .models import Profile,Posts,Following,Comments
 from .forms import DetailsForm,PostForm
 from django.db.models import F
 # views

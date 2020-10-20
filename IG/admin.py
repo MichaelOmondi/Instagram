@@ -5,5 +5,5 @@ from .models import Profile,Posts,Following,Comments
 admin.site.register(Profile)
 admin.site.register(Posts)
 admin.site.register(Following)
-admin.site.reqister(Comments)
+admin.site.register(Comments)
 
