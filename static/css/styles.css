@@ -1,9 +1,10 @@
 body {
-    background-image: url('https://images.unsplash.com/photo-1514254220549-515803732172?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    background-color: black;
     color:white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: medium;
     text-align: center;
+    
     
 }
 
@@ -29,7 +30,7 @@ body {
     padding-top: 40px;
 }
 
-#demo {
+/* /* #demo {
     float:right;
 }
 
@@ -41,8 +42,8 @@ body {
     height:80%;
     margin-top: 10%;
     margin-left:53%;
-    width:43.5%;
-}
+    width:43.5%; */
+/* } */ */
 
 #colored-nav {
     background-color:rgba(43, 42, 42, 0.507);
@@ -59,7 +60,7 @@ body {
 }
 
 #heart:hover {
-    color: red;
+    color: hotpink;
 }
 
 #icon {
@@ -98,9 +99,9 @@ body {
 
 button:hover {
     border:0px;
-    background: #007991;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #78ffd6, #007991);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #007991;  
+    background: -webkit-linear-gradient(to right, #78ffd6, #007991);  
+    background: linear-gradient(to right, #78ffd6, #007991); 
 
 }
 

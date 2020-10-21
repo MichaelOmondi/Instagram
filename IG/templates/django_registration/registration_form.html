@@ -1,4 +1,4 @@
-{%extends "registrater/base.html"%} {% load bootstrap3 %}
+{%extends "django_registration/base.html"%} {% load bootstrap3 %}
 {% block content %}
 <div class="container-fluid" style="background-color:rgb(0,0,0,0.9);">
         <div class="row" style="margin-left:35%;">
@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-4">
             {% if form.errors %}
-            <p> All information might not be correct </p>
+            <p> The information entered is not correct </p>
             {% endif %}
             <div id="register" style="z-index:3;">
                 <form action="/accounts/register/" method="post">

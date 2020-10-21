@@ -28,27 +28,17 @@ MODE=config("MODE", default="dev")
 DEBUG = True
 SECRET_KEY = 'mike'
 # development
-if config('MODE')=="dev":
-    DATABASES = {
-       'default': {
-           'ENGINE': 'django.db.backends.postgresql_psycopg2',
-           'NAME': 'instagram',
-           'USER': 'moringa',
-           'PASSWORD': 'Access',
-           'HOST': '127.0.0.1',
-           'PORT': '8000'
-       }  
-   }
-# production
-# else:
-#    DATABASES = {
-#        'default': dj_database_url.config(
-#            default=config('DATABASE_URL')
-#        )
-#    }
+# if config('MODE')=="dev":
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'instagram',
+        'USER': 'moringa',
+        'PASSWORD': 'Access',
+        
+    }  
+}
 
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
 
 
 # Application definition
@@ -147,3 +137,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Configure Django App for Heroku.
 # django_heroku.settings(locals())
+LOGIN_REDIRECT_URL = '/'

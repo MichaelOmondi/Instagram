@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from .models import Profile,Posts,Following,Comments
 from .forms import DetailsForm,PostForm
 from django.db.models import F
+
 # views
 def welcome(request):
     return render(request, 'welcome.html')
@@ -42,9 +43,9 @@ def profile(request):
 @login_required(login_url='/accounts/login/')
 def timeline(request):
     users = User.objects.all()
-    posts = Post.objects.all()
+    posts = Posts.objects.all()
     follows = Following.objects.all()
-    comments = Comment.objects.all()
+    comments = Comments.objects.all()
     if request.method=='POST' and 'follow' in request.POST:
         following=Following(username=request.POST.get("follow"),followed=request.user.username)
         following.save()
@@ -107,7 +108,7 @@ def search(request):
         searched_user = User.objects.filter(username=search_term).first()
         if searched_user:
             message = f"{search_term}"
-            return render(request, 'other_profile.html',{"profile_user": searched_user,"posts":posts,"followingcount":followingcount,"followercount":followercount})
+            return render(request, 'profile2.html',{"profile_user": searched_user,"posts":posts,"followingcount":followingcount,"followercount":followercount})
         else:
             message = "The username you are searching for does not exist."
             return render(request, 'notfound.html',{"message":message})
