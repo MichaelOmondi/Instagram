@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODE=config("MODE", default="dev")
 DEBUG = True
 SECRET_KEY = 'mike'
-# development
+
 # if config('MODE')=="dev":
 DATABASES = {
     'default': {
@@ -125,6 +125,8 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
@@ -136,5 +138,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Configure Django App for Heroku.
-# django_heroku.settings(locals())
-LOGIN_REDIRECT_URL = '/'
+django_heroku.settings(locals())
+LOGIN_REDIRECT_URL = 'registration_complete'
+LOGIN_URL = 'login'

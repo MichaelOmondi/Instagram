@@ -8,7 +8,7 @@ class Profile(models.Model):
     bio = models.CharField(max_length = 245)
 
     def __str__(self):
-        return f'{self.user.username}'
+        return f'{self.User}'
 
 #Following
 class Following(models.Model):
