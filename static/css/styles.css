@@ -13,10 +13,10 @@ body {
 }
 
 #title {
-    background: -webkit-linear-gradient( #78ffd6, #007991);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+        background: -webkit-linear-gradient( #78ffd6, #007991);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
 #login {
     text-align: center;
